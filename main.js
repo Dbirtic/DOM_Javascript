@@ -52,3 +52,49 @@ item.style.color = "red";
 // querySelectorAll
 const selectorAll = document.querySelectorAll(".title");
 
+// traversing the DOM
+const itemList = document.querySelector("#items");
+
+// parent node
+itemList.parentNode.style.backgroundColor = "#ccdd22";
+
+// child nodes - not very usable, children are better
+console.log(itemList.childNodes);
+
+console.log(itemList.children);
+
+// First child
+console.log(itemList.firstChild);
+
+// first element child
+console.log(itemList.firstElementChild);
+
+// next sibling
+console.log(itemList.nextSibling);
+
+console.log(itemList.nextElementSibling);
+
+// creating elements and insert them
+// create element
+const newDiv = document.createElement('div');
+
+// add class
+newDiv.className = "hello";
+
+// add id
+newDiv.id = "hello1";
+
+// add attr
+newDiv.setAttribute = "title, hello div";
+
+// create text node
+const newDivText = document.createTextNode("Hello World");
+
+// add text to div
+newDiv.appendChild(newDivText);
+
+const headerContainer = document.querySelector("header .container");
+const h1 = document.querySelector("header h1");
+
+headerContainer.insertBefore(newDiv, h1);
+newDiv.style.fontSize = "30px";
