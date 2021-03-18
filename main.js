@@ -30,3 +30,25 @@ for(let i = 0; i < listItems.length; i++)
 // getElementsByTagName
 const li = document.getElementsByTagName("li");
 
+for(let i = 0; i < li.length; i++)
+{
+    li[i].style.borderTopColor = "#551123";
+}
+
+// querySelector
+const selector = document.querySelector("#main-header");
+
+selector.style.borderTopColor = "#FFFFF00";
+
+const input = document.querySelector("input");
+input.value = "Goodbye world";
+
+const submit = document.querySelector("input[type='submit']");
+submit.value = "SEND";
+
+const item = document.querySelector(".list-group-item");
+item.style.color = "red";
+
+// querySelectorAll
+const selectorAll = document.querySelectorAll(".title");
+
