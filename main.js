@@ -97,4 +97,36 @@ const headerContainer = document.querySelector("header .container");
 const h1 = document.querySelector("header h1");
 
 headerContainer.insertBefore(newDiv, h1);
-newDiv.style.fontSize = "30px";
+newDiv.style.fontSize = "30px"; // */
+
+var button = document.getElementById("button").addEventListener("click", buttonclick);
+
+function buttonclick(e){
+    document.getElementById("header-title").textContent = "Changed";
+    document.querySelector("#main").style.backgroundColor = "11ff11"; // */
+}
+
+var box = document.getElementById("box");
+
+/*box.addEventListener("mouseenter", runEvent);
+box.addEventListener("mouseleave", runEvent);
+
+box.addEventListener("mouseover", runEvent);
+box.addEventListener("mouseout", runEvent); // */
+
+let itemInput = document.querySelector("input[type='text']");
+const form = document.querySelector("form");
+let select = document.querySelector("select");
+
+select.addEventListener('change', runEvent);
+
+itemInput.addEventListener("keydown", runEvent);
+
+box.addEventListener("mousemove", runEvent);
+
+function runEvent(e){
+    console.log("Event type: " + e.type);
+
+    box.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 40)";
+};
+
